@@ -168,7 +168,16 @@
      
 
 
-     // ANS=  above code give an error 
+      // ANS= #include<stdio.h>
+              int main() 
+            { 
+          int x = printf("ineuron");
+          printf("%d",x);
+          return 0;
+           }
+
+     // output =>ineuron7         b/c printf() returns the no. of character written inside the double quotes !
+
 
 
    ****************************************COMPLETE*************************************************
