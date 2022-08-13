@@ -125,17 +125,17 @@
   #include<stdio.h>
   int main(){
     int n;
-    bool check=false;
+    int check=0;
   printf("enter a no. :");
   scanf("%d",&n);
   for(int i=2; i<n; i++)
   {
     if(n%i==0)
     {
-    check=true;
+    check=1;
     }
   }
-  if(check==false)printf("given no. is prime no.");
+  if(check==0)printf("given no. is prime no.");
   else printf("not a prime no. ");
   return 0;
   }
