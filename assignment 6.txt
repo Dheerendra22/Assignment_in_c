@@ -19,7 +19,7 @@
 
 //Q.2=> Write a program to calculate sum of first N even natural numbers
 
-   #include<stdio.h>
+ #include<stdio.h>
  int main(){
  
  int n,m=0;
@@ -36,7 +36,7 @@
 
 //Q.3=> Write a program to calculate sum of first N odd natural numbers
 
-#include<stdio.h>
+ #include<stdio.h>
  int main(){
  int n,m=0;
  printf("enter the no.");
@@ -54,7 +54,7 @@
 
 //Q.4=> Write a program to calculate sum of squares of first N natural numbers
 
-  #include<stdio.h>
+ #include<stdio.h>
  int main(){
 
  int n,m=0;
@@ -141,6 +141,7 @@
   }
 
 //Q.9=> Write a program to calculate LCM of two numbers
+
 #include<stdio.h>
 int main(){
 
@@ -157,14 +158,16 @@ d=b;
  short int i=2,x=0;
  while(a>=i)
  {
+  
   if(a%i==0)
   { arr1[x]=i;
    x++;
    a/=i;
 
-  }
+   }
   else i++;
  }
+
 
 
 short int arr2[20];
@@ -179,14 +182,17 @@ short int arr2[20];
   }
   else j++;
  }
+ 
+ 
 int hcf=1;
+
 for(int i=0;i<x; i++)
 {
   for(int j=0; j<y;j++)
   {
     if(arr1[i]==arr2[j])
     {hcf*=arr2[j];
-    arr2[j]=0;
+      arr2[j]=0;
         break;
     }
   }
@@ -195,8 +201,6 @@ for(int i=0;i<x; i++)
 int lcm=(c*d)/hcf;
 printf("HCF of two given two no. is %d \n",hcf);
 printf("LCM of given two no. is %d",lcm);
-
-
 
 return 0;
 }
