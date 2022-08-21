@@ -201,19 +201,20 @@ int main()
   #include<stdio.h>
   int main()
   {
-   int n;
-   printf("enter a three digit no. :");
+    int n,x,y,count=0,temp;
+   printf("enter a no.:");
    scanf("%d",&n);
-
-   int temp=0 ;
-   for(int i=0; i<3; i++)
-   {  temp*=10;
-      temp+=n%10;
-      n=n/10;
-
+   temp=n;
+   n/=10;
+   x=temp%10;
+   y=temp/10;
+   while(y)
+   {
+    x*=10;
+    y/=10;
    }
-   printf("after rotate towards right  the will be = %d",temp);
+   printf("%d",x+n);
+   
    return 0;
    
-
   }
