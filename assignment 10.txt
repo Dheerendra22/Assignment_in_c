@@ -165,6 +165,8 @@
 
     printf("enter a no. of selected items at time : ");
     scanf("%d",&r);
+    if(r>n)
+    printf("r will not greater than n !");
 
     printf("combination for given selected item is%.2f",combi(n,r));
 
