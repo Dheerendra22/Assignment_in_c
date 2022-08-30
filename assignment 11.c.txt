@@ -1,131 +1,72 @@
 
 //Q.1=> Write a function to calculate LCM of two numbers. (TSRS)
- 
+
 #include<stdio.h>
 
-int LCM(int l,int m)
-{
-  int a,b,c,d;
-
-a=l;
-b=m;
-
-c=a;  // copy value
-d=b;
-
-
- short int arr1[20];
- short int i=2,x=0;
- while(a>=i)
+ int HCF(int n,int m)
  {
-  if(a%i==0)
-  { arr1[x]=i;
-   x++;
-   a/=i;
-
-  }
-  else i++;
- }
-
-
-short int arr2[20];
- short int j=2,y=0;
- while(b>=j)
- {
-  if(b%j==0)
-  { arr2[y]=j;
-   y++;
-   b/=j;
-
-  }
-  else j++;
- }
-int hcf=1;
-for(int i=0;i<x; i++)
-{
-  for(int j=0; j<y;j++)
-  {
-    if(arr1[i]==arr2[j])
-    {hcf*=arr2[j];
-    arr2[j]=0;
-        break;
-    }
-  }
+   if(n<m)
+   {
+       for(int i=n-1; i>0; i--)
+       {
+           if(n%i==0 && m%i==0)
+           return i;
+       }
+   }
+   else if(m<n)
+   {  for(int i=m-1; i>0; i--)
+       {
+           if(n%i==0 && m%i==0)
+           return i;
+       }
+       
+   }
+  
 }
 
-int lcm=(c*d)/hcf;
-
-return lcm;
-
+int LCM(int n,int m)
+{
+  return (n*m)/HCF(n,m); 
+    
 }
-
 int main()
 {
- int n,m;
- printf("enter two no. :");
- scanf("%d %d",&n,&m);
- 
- printf("lcm of given no. is %d",LCM(n,m));
+  int n,m;
+  printf("enter two  diff. +ve  no. :");
+  scanf("%d %d",&n,&m);
 
-return 0;
+  int x=LCM(n,m);
+  printf("lcm of given two no. is %d",x);
+
+  return 0;
+
 }
 
 //Q.2=> Write a function to calculate HCF of two numbers. (TSRS)
 
  #include<stdio.h>
 
- int HCF(int l,int m)
+ int HCF(int n,int m)
  {
-   int a,b,c,d;
-   a=l;
-   b=m;
-   c=a;  // copy value
-   d=b;
-
- short int arr1[20];
- short int i=2,x=0;
- while(a>=i)
- {
-  if(a%i==0)
-  { arr1[x]=i;
-   x++;
-   a/=i;
-
+   if(n<m)
+   {
+       for(int i=n-1; i>0; i--)
+       {
+           if(n%i==0 && m%i==0)
+           return i;
+       }
+   }
+   else if(m<n)
+   {  for(int i=m-1; i>0; i--)
+       {
+           if(n%i==0 && m%i==0)
+           return i;
+       }
+       
+   }
+   else return n;
   }
-  else i++;
- }
-
-
- short int arr2[20];
- short int j=2,y=0;
- while(b>=j)
- {
-  if(b%j==0)
-  { arr2[y]=j;
-   y++;
-   b/=j;
-
-  }
-  else j++;
- }
- int hcf=1;
- for(int i=0;i<x; i++)
- {
-  for(int j=0; j<y;j++)
-  {
-    if(arr1[i]==arr2[j])
-    {hcf*=arr2[j];
-    arr2[j]=0;
-        break;
-    }
-  }
- }
-
- int lcm=(c*d)/hcf;
- return hcf;
-
- }
-
+  
  int main()
  { int n,m;
     printf("enter two no. :");
