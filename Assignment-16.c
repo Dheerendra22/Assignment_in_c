@@ -1,4 +1,4 @@
-/*Q.1=> Write a program to calculate the sum of two matrices each of order 3x3.
+//Q.1=> Write a program to calculate the sum of two matrices each of order 3x3.
 
 #include<stdio.h> 
 int main()
@@ -271,7 +271,7 @@ return 0;
      else
      printf("given matrix is not a sprase matrix");
  return 0;
- }*/
+ }
 
 //Q.10=> Write a program in C to find the row with maximum number of 1s.
 
